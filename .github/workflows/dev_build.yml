@@ -12,12 +12,8 @@ jobs:
           distribution: adopt
       - name: Build
         run: ./gradlew build
-      - name: Release
-        uses: marvinpinto/action-automatic-releases@latest
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2.2.4
         with:
-          repo_token: '${{ secrets.GITHUB_TOKEN }}'
-          automatic_release_tag: latest
-          prerelease: true
-          title: Dev Build
-          files: |
-            ./build/libs/*.jar
+          name: build-artifacts
+          path: build/libs

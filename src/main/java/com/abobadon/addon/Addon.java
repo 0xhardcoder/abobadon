@@ -1,8 +1,8 @@
-package com.example.addon;
+package com.abobadon.addon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import com.abobadon.addon.commands.CommandAbobadon;
+import com.abobadon.addon.hud.HudAbobadon;
+import com.abobadon.addon.modules.ModuleAbobadon;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.commands.Commands;
@@ -14,21 +14,15 @@ import org.slf4j.Logger;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
-    public static final HudGroup HUD_GROUP = new HudGroup("Example");
+    public static final Category CATEGORY = new Category("Abobadon");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
+        LOG.info("Initializing Meteor Addon Abobadon");
 
         // Modules
-        Modules.get().add(new ModuleExample());
+        Modules.get().add(new Moduleabobadon());
 
-        // Commands
-        Commands.add(new CommandExample());
-
-        // HUD
-        Hud.get().register(HudExample.INFO);
     }
 
     @Override
@@ -38,6 +32,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "com.abobadon.addon";
     }
 }
