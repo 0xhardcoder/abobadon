@@ -1,7 +1,5 @@
 package com.abobadon.addon;
 
-import com.abobadon.addon.commands.CommandAbobadon;
-import com.abobadon.addon.hud.HudAbobadon;
 import com.abobadon.addon.modules.ModuleAbobadon;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
